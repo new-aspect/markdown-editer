@@ -1,6 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
+import ReactMarkdown from 'react-markdown';
+import 'github-markdown-css'; // 引入样式库
+import remarkGfm from 'remark-gfm'; // 引入插件
 
 function App() {
   // 使用content和setContent
@@ -21,7 +24,10 @@ function App() {
       {/* 右边是渲染部分 */}
       <div className='preview'>
         {/* 暂时是空的 */}
-        <div>{content}</div>
+       
+        <div className="markdown-body">
+          <ReactMarkdown remarkPlugins={[remarkGfm]} >{content}</ReactMarkdown>
+        </div>
       </div>
     </div>
   )
