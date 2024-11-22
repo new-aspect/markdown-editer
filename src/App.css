@@ -1,13 +1,17 @@
 .container {
   /* 为什么写display: flex 就从上下两个元素，变成水平的元素 */
   display: flex; 
-  height: 100px;
+  height: 100vh; /* 全屏高度 */
 }
 
 .editor {
   flex: 1; /* 左右各占一半 */ 
+  border-right: 1px solid #ccc;  /* 分割线 */
+  padding: 16px;
 }
 
 .preview {
   flex: 1; /* 左右各占一半 */
+  padding: 16px;
+  background: #f9f9f9;
 }
