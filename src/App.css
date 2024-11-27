@@ -23,6 +23,12 @@
   background-color: #f9f9f9; /*浅灰背景*/
 }
 
+.editor .cleanBtn {
+  float: right;
+  padding: auto; /* 这是字体内边距 */
+  margin-bottom: 10px;
+}
+
 .preview {
   flex: 1; /* 左右各占一半 */
   padding: 16px;

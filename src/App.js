@@ -10,12 +10,17 @@ function App() {
   // 那么这时候监听testarea的文字变化，然后将变化塞到setContent里面
   const [content, setContent] = useState("")
 
+  function cleanContent() {
+    setContent("")
+  }
 
   return (
     <div className='container'>
       {/* 左边是 textares */}
       <div className='editor'>
+        <button className='cleanBtn' onClick={cleanContent}>清空内容</button>
         <textarea 
+          value={content}
           placeholder='在这里输入 Markdown 内容' 
           onChange={e=>{setContent(e.target.value)}}
         ></textarea>
