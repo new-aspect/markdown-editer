@@ -24,9 +24,24 @@
 }
 
 .editor .cleanBtn {
+  padding: 8px 16px; /* 按钮内边距 */
+  background-color: #007bff;/* 背景色，这个背景色配合白字怎的好看 */
+  color:white;
+  border: none; /*去除按钮边框 */
+  border-radius: 4px;
+  font-size: 14px;  /* 字体大小 */
+  cursor: pointer; /* 鼠标悬浮时显示手式 */
   float: right;
-  padding: auto; /* 这是字体内边距 */
   margin-bottom: 10px;
+  transition: background-color 0.3s;
+}
+
+.editor .cleanBtn:hover {
+  background-color: #0056b3;
+}
+
+.editor .cleanBtn:active {
+  transform: scale(1.05);/* 点击时按钮缩小 */
 }
 
 .preview {
